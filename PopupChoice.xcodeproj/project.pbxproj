@@ -8,20 +8,34 @@
 
 /* Begin PBXBuildFile section */
 		AFF5404C2215F7EC00FA26EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF5404B2215F7EC00FA26EE /* AppDelegate.swift */; };
-		AFF5404E2215F7EC00FA26EE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF5404D2215F7EC00FA26EE /* ViewController.swift */; };
+		AFF5404E2215F7EC00FA26EE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF5404D2215F7EC00FA26EE /* HomeViewController.swift */; };
 		AFF540512215F7EC00FA26EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFF5404F2215F7EC00FA26EE /* Main.storyboard */; };
 		AFF540532215F7ED00FA26EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFF540522215F7ED00FA26EE /* Assets.xcassets */; };
 		AFF540562215F7ED00FA26EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFF540542215F7ED00FA26EE /* LaunchScreen.storyboard */; };
+		AFF540622215F8B000FA26EE /* StandaloneNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF5405D2215F8AF00FA26EE /* StandaloneNavigationBar.swift */; };
+		AFF540632215F8B000FA26EE /* UITableView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF5405E2215F8AF00FA26EE /* UITableView+Reusable.swift */; };
+		AFF540642215F8B000FA26EE /* ChoicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF5405F2215F8AF00FA26EE /* ChoicesViewController.swift */; };
+		AFF540652215F8B000FA26EE /* AlwaysShowPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF540602215F8B000FA26EE /* AlwaysShowPopup.swift */; };
+		AFF540662215F8B000FA26EE /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF540612215F8B000FA26EE /* Reusable.swift */; };
+		AFF540692215F94C00FA26EE /* ChoiceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF540672215F94C00FA26EE /* ChoiceTableViewCell.swift */; };
+		AFF5406A2215F94C00FA26EE /* ChoiceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFF540682215F94C00FA26EE /* ChoiceTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AFF540482215F7EC00FA26EE /* PopupChoice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PopupChoice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFF5404B2215F7EC00FA26EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AFF5404D2215F7EC00FA26EE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AFF5404D2215F7EC00FA26EE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		AFF540502215F7EC00FA26EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AFF540522215F7ED00FA26EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AFF540552215F7ED00FA26EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AFF540572215F7ED00FA26EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFF5405D2215F8AF00FA26EE /* StandaloneNavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StandaloneNavigationBar.swift; sourceTree = "<group>"; };
+		AFF5405E2215F8AF00FA26EE /* UITableView+Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Reusable.swift"; sourceTree = "<group>"; };
+		AFF5405F2215F8AF00FA26EE /* ChoicesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoicesViewController.swift; sourceTree = "<group>"; };
+		AFF540602215F8B000FA26EE /* AlwaysShowPopup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlwaysShowPopup.swift; sourceTree = "<group>"; };
+		AFF540612215F8B000FA26EE /* Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		AFF540672215F94C00FA26EE /* ChoiceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceTableViewCell.swift; sourceTree = "<group>"; };
+		AFF540682215F94C00FA26EE /* ChoiceTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChoiceTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +69,14 @@
 			isa = PBXGroup;
 			children = (
 				AFF5404B2215F7EC00FA26EE /* AppDelegate.swift */,
-				AFF5404D2215F7EC00FA26EE /* ViewController.swift */,
+				AFF5404D2215F7EC00FA26EE /* HomeViewController.swift */,
+				AFF5405F2215F8AF00FA26EE /* ChoicesViewController.swift */,
+				AFF540672215F94C00FA26EE /* ChoiceTableViewCell.swift */,
+				AFF540682215F94C00FA26EE /* ChoiceTableViewCell.xib */,
+				AFF5405D2215F8AF00FA26EE /* StandaloneNavigationBar.swift */,
+				AFF540602215F8B000FA26EE /* AlwaysShowPopup.swift */,
+				AFF5405E2215F8AF00FA26EE /* UITableView+Reusable.swift */,
+				AFF540612215F8B000FA26EE /* Reusable.swift */,
 				AFF5404F2215F7EC00FA26EE /* Main.storyboard */,
 				AFF540522215F7ED00FA26EE /* Assets.xcassets */,
 				AFF540542215F7ED00FA26EE /* LaunchScreen.storyboard */,
@@ -124,6 +145,7 @@
 			files = (
 				AFF540562215F7ED00FA26EE /* LaunchScreen.storyboard in Resources */,
 				AFF540532215F7ED00FA26EE /* Assets.xcassets in Resources */,
+				AFF5406A2215F94C00FA26EE /* ChoiceTableViewCell.xib in Resources */,
 				AFF540512215F7EC00FA26EE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -135,8 +157,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFF5404E2215F7EC00FA26EE /* ViewController.swift in Sources */,
+				AFF540632215F8B000FA26EE /* UITableView+Reusable.swift in Sources */,
+				AFF5404E2215F7EC00FA26EE /* HomeViewController.swift in Sources */,
+				AFF540692215F94C00FA26EE /* ChoiceTableViewCell.swift in Sources */,
+				AFF540652215F8B000FA26EE /* AlwaysShowPopup.swift in Sources */,
+				AFF540642215F8B000FA26EE /* ChoicesViewController.swift in Sources */,
+				AFF540622215F8B000FA26EE /* StandaloneNavigationBar.swift in Sources */,
 				AFF5404C2215F7EC00FA26EE /* AppDelegate.swift in Sources */,
+				AFF540662215F8B000FA26EE /* Reusable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,7 +241,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -268,7 +296,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

@@ -24,32 +24,23 @@ class HomeViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-    @IBAction func showChoiceButtonDidTap(_ sender: UIButton) {
-        let models = [Model(name: "Time 1 Time 1 Time 1", id: 1), Model(name: "Time 2 Time 1 Time 1", id: 2), Model(name: "Time 3 Time 1 Time 1", id: 3)]
+    @IBAction func optionsButtonDidTap(_ sender: UIButton) {
+        let models = [Model(name: "Option 1", id: 1), Model(name: "Option 2", id: 2), Model(name: "Option 3", id: 3)]
         let controller = ChoicesViewController(models, labels: { (model) -> String in
             return model.name
         }) { (model) in
             print(model.name)
         }
-        controller.preferredContentSize = CGSize(width: 256, height: 44*5 + 0.5)
-        controller.view.backgroundColor = .black
-        
-        // MARK: Tricks
-        // This is the hack for showing the controller in the middle when used in combination with UIPopoverArrowDirection(rawValue: 0)
-        let sourceView = UIView(frame: CGRect.zero)
-        view.addSubview(sourceView)
-        sourceView.translatesAutoresizingMaskIntoConstraints = false
-        sourceView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        sourceView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-        
-        showPopup(controller, sourceView: sourceView)
+        controller.preferredContentSize = CGSize(width: 215, height: 44*3)
+        showPopup(controller, sourceView: sender)
     }
     
     private func showPopup(_ controller: UIViewController, sourceView: UIView) {
         let presentationController = AlwaysPresentAsPopover.configurePresentation(forController: controller)
         presentationController.sourceView = sourceView
         presentationController.sourceRect = sourceView.bounds
-        presentationController.permittedArrowDirections = UIPopoverArrowDirection(rawValue: 0)
+        presentationController.permittedArrowDirections = [.down, .up]
+        presentationController.backgroundColor = UIColor(white: 0, alpha: 0)
         self.present(controller, animated: true)
     }
     

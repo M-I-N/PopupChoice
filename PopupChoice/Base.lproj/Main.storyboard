@@ -18,18 +18,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R9X-mE-zhQ">
-                                <rect key="frame" x="138.5" y="120" width="98" height="30"/>
-                                <state key="normal" title="Show Choices"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3XX-Ya-LlU">
+                                <rect key="frame" x="305" y="318.5" width="54" height="30"/>
+                                <state key="normal" title="Options"/>
                                 <connections>
-                                    <action selector="showChoiceButtonDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="caO-xn-Lfn"/>
+                                    <action selector="optionsButtonDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zPc-Ok-L4z"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zgj-th-HQ2">
+                                <rect key="frame" x="305" y="617" width="54" height="30"/>
+                                <state key="normal" title="Options"/>
+                                <connections>
+                                    <action selector="optionsButtonDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0D3-nq-9lt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AsV-cq-Y8h">
+                                <rect key="frame" x="305" y="40" width="54" height="30"/>
+                                <state key="normal" title="Options"/>
+                                <connections>
+                                    <action selector="optionsButtonDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nui-3U-sbS"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="R9X-mE-zhQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="D89-sy-kcX"/>
-                            <constraint firstItem="R9X-mE-zhQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="vX0-Uv-xeh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AsV-cq-Y8h" secondAttribute="trailing" constant="16" id="F9j-2X-Tid"/>
+                            <constraint firstItem="3XX-Ya-LlU" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="IKM-0G-Tkb"/>
+                            <constraint firstItem="AsV-cq-Y8h" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" symbolic="YES" id="KQt-SP-QeB"/>
+                            <constraint firstItem="Zgj-th-HQ2" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" symbolic="YES" id="bY0-c0-3oK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3XX-Ya-LlU" secondAttribute="trailing" constant="16" id="cvm-Va-pt8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Zgj-th-HQ2" secondAttribute="trailing" constant="16" id="hUr-qm-FUu"/>
+                            <constraint firstItem="AsV-cq-Y8h" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="hx2-nk-wba"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Zgj-th-HQ2" secondAttribute="bottom" constant="20" id="ikP-qG-Ajo"/>
+                            <constraint firstItem="3XX-Ya-LlU" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" symbolic="YES" id="nVB-bP-66N"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

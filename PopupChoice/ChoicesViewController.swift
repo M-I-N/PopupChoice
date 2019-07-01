@@ -16,10 +16,7 @@ class ChoicesViewController<Element> : UIViewController, UITableViewDataSource, 
     private let values : [Element]
     private let labels : LabelProvider
     private let onSelect : SelectionHandler?
-    
-    private let navigationBar = StandaloneNavigationBar(frame: .zero)
-    private let separatorLine = UIView(frame: .zero)
-    private let bottomButton = UIButton(type: .system)
+
     private let tableView = UITableView(frame: .zero, style: .plain)
     
     init(_ values : [Element], labels : @escaping LabelProvider = String.init(describing:), onSelect : SelectionHandler?) {
@@ -32,54 +29,7 @@ class ChoicesViewController<Element> : UIViewController, UITableViewDataSource, 
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .black
-        setupNavigationBar()
-        setupSeparatorLine()
-        setupBottomDismissButton()
         setupTableView()
-    }
-    
-    private func setupNavigationBar() {
-        view.addSubview(navigationBar)
-        navigationBar.translatesAutoresizingMaskIntoConstraints = false
-        navigationBar.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-        navigationBar.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-        navigationBar.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-        navigationBar.heightAnchor.constraint(equalToConstant: 44).isActive = true
-        
-        let navItem = UINavigationItem(title: "Choice Options")
-        navigationBar.setItems([navItem], animated: false)
-        navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
-    }
-    
-    private func setupSeparatorLine() {
-        view.addSubview(separatorLine)
-        separatorLine.translatesAutoresizingMaskIntoConstraints = false
-        separatorLine.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-        separatorLine.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-        separatorLine.topAnchor.constraint(equalTo: navigationBar.bottomAnchor).isActive = true
-        separatorLine.heightAnchor.constraint(equalToConstant: 0.5).isActive = true
-        
-        separatorLine.backgroundColor = .white
-    }
-    
-    private func setupBottomDismissButton() {
-        view.addSubview(bottomButton)
-        bottomButton.translatesAutoresizingMaskIntoConstraints = false
-        bottomButton.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-        bottomButton.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-        bottomButton.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-        bottomButton.heightAnchor.constraint(equalToConstant: 44).isActive = true
-        
-        bottomButton.setTitle("Dismiss", for: .normal)
-        bottomButton.setTitleColor(.white, for: .normal)
-        bottomButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
-        bottomButton.backgroundColor = .black
-        
-        bottomButton.addTarget(self, action: #selector(bottomButtonDidTap(_:)), for: .touchUpInside)
-    }
-    
-    @objc func bottomButtonDidTap(_ sender: UIButton) {
-        dismiss(animated: true, completion: nil)
     }
     
     private func setupTableView() {
@@ -87,8 +37,8 @@ class ChoicesViewController<Element> : UIViewController, UITableViewDataSource, 
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-        tableView.topAnchor.constraint(equalTo: separatorLine.bottomAnchor).isActive = true
-        tableView.bottomAnchor.constraint(equalTo: bottomButton.topAnchor).isActive = true
+        tableView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         
         tableView.dataSource = self
         tableView.delegate = self

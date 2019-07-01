@@ -39,7 +39,7 @@ class HomeViewController: UIViewController {
         let presentationController = AlwaysPresentAsPopover.configurePresentation(forController: controller)
         presentationController.sourceView = sourceView
         presentationController.sourceRect = sourceView.bounds
-        presentationController.permittedArrowDirections = [.down, .up]
+        presentationController.permittedArrowDirections = [.up, .down]
         presentationController.backgroundColor = UIColor(white: 0, alpha: 0)
         self.present(controller, animated: true)
     }
